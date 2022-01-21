@@ -3,19 +3,21 @@ package com.bitcamp.web;
 import java.util.Scanner;
 
 public class CalcApp {
-    int n1,n2,fin = 0;
-    String op = "+";
+    public String webSite = "Calc world";
+    int n1 = 0;
+    int n2 = 0;
+    String op = "";
+    int fin = 0;
 
-    void  calc(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("첫번째 숫자");
-        n1 = scan.nextInt();
-        System.out.println("두번째 숫자");
-        n2 =  scan.nextInt();
-        System.out.println("연산기호");
-        String op = scan.next();
-        fin = n1+n2;
-        System.out.println(n1+ op + n2 + " " + " = " + fin);
+    public String  calc(int paramn1, int paramn2, String paramop){
+        n1 =  paramn1;
+        n2 =  paramn2;
+        op = paramop;
+        fin = n1 + n2;
+
+       return n1+ op + n2 + " " + " = " + fin;
+
+
     }
 
 
